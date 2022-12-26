@@ -1,0 +1,246 @@
+/*Fonts=================================================================*/
+@font-face {
+  font-family: 'proxima nova light';
+  src: url(../fonts/proxima-nova-light/proximanova-light-webfont.eot) format('embedded-opentype'),
+    url(../fonts/proxima-nova-light/proximanova-light-webfont.woff) format('woff'),
+    url(../fonts/proxima-nova-light/proximanova-light-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'proxima nova semibold';
+  src: url(../fonts/proxima-nova-semibold/proximanova-semibold-webfont.woff2) format('woff2'),
+    url(../fonts/proxima-nova-semibold/proximanova-semibold-webfont.woff) format('woff'),
+    url(../fonts/proxima-nova-semibold/Proxima-Nova-Semibold.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'proxima nova bold';
+  src: url(../fonts/proxima-nova-bold/proximanova-bold-webfont.eot) format('embedded-opentype'),
+    url(../fonts/proxima-nova-bold/proximanova-bold-webfont.woff) format('woff'),
+    url(../fonts/proxima-nova-bold/proximanova-bold-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*Reset================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+}
+
+/*Page=================================================================*/
+html {
+  background: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "proxima nova light", Arial, Sans-serif;
+  text-rendering: optimizeLegibility;
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "section1 section1"
+  "section2 section2"
+  "footer footer";
+}
+
+/*Header===============================================================*/
+
+#header nav #menu,
+#header nav #social{
+  display: none;
+}
+
+#header {
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+  background: #111;
+  height: 62px;
+  width: 100%;
+  padding: 0 10%;
+  grid-area: header;
+}
+
+#header nav {
+  float: right;
+  height: 96px;
+  display: flex;
+  align-items: center;
+}
+
+#header #logo {
+  height: 62px;
+  width: 40px;
+  background: url(../img/sprite-mobile.png) 0px -63px no-repeat;
+  text-indent: -9999px;
+  float: left;
+}
+
+#header #logo:hover,
+#header nav #menu li a:hover,
+#header nav #social li a:hover{
+  opacity: 0.5;
+}
+
+#header nav #menu{
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+#header nav #menu li a{
+  margin-left: 2rem;
+}
+
+#header #logo,
+#header nav #menu li a,
+#header nav #social li a{
+  color: rgb(255, 255, 255);
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+#header.hide {
+  transform: translateY(-96px);
+  transition: all 0.5s ease-in-out;
+}
+
+/*Social===============================================================*/
+
+
+#header nav #social li {
+  margin-left: 2rem;
+}
+
+#header nav #social .github a,
+#header nav #social .linkedin a,
+#header nav #social .behance a{
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background: url(../img/sprite_teste.png) 0 0 no-repeat;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+#header nav #social .linkedin a {
+  background-position: -64px -186px;
+}
+
+#header nav #social .github a {
+  background-position: -96px -186px;
+}
+
+#header nav #social .behance a {
+  background-position: -30.4px -186px;
+}
+
+/*Menu Mobile===============================================================*/
+
+#header #icon-nav {
+  width: 27px;
+  height: 62px;
+  float: right;
+  background: url(../img/sprite-mobile.png) -42px -63px no-repeat;
+  text-indent: -9999px;
+}
+
+#icon-nav.active {
+  opacity: 0.5;
+}
+
+#section1{
+  background: rgb(85, 85, 85);
+  padding-top: 96px;
+  height: 100vh;
+  grid-area: section1;
+}
+
+#section2{
+  background: rgb(87, 67, 67);
+  height: 100vh;
+  grid-area: section2;
+}
+
+#footer{
+  background: #111;
+  height: 96px;
+  grid-area: footer;
+}
+
+@media only screen and (min-width: 1140px) {
+  
+  
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  #header nav #menu{
+    font-size: 18px;
+    
+  }
+
+}
+
+
+
+@media only screen and (min-width: 830px) {
+
+  #icon-nav{
+    display: none;
+  }
+
+  #header{
+    height: 96px;
+  }
+
+  #header #logo {
+    height: 96px;
+    width: 4rem;
+    background: url(../img/sprite.png) 0px -92px no-repeat;
+  }
+
+  #header nav #menu,
+  #header nav #social{
+    display: flex;
+    
+  }
+
+}
+
+/* Mobile img*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+  .logo,
+  .icon-nav,
+  .social li a {
+    background-image: url(../img/sprite-mobile@2x.png);
+    background-size: 200px 500px;
+  }
+  
+}
+
+/* Desktop img*/
+@media only screen and (min-width: 830px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 830px) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 830px) and (min-device-pixel-ratio: 1.5) {
+  .logo,
+  .social li a{
+    background-image: url(../img/sprite@2x_teste.png);
+    background-size: 200px 1200px;
+  }
+}
