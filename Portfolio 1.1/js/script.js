@@ -51,4 +51,21 @@
     window.addEventListener('scroll', checkScroll);
 
 })();
-/*Fim Esconder/Mostrar Header ao rolar pagina*/
+
+/*Menu Mobile =================================================*/
+const hamburguer = document.querySelector('#icon-nav');
+const menuMobile = document.querySelector('header nav');
+
+function x() {
+    hamburguer.classList.toggle('active');
+
+    if(hamburguer.classList.contains('active')){
+        menuMobile.classList.add('open');
+    }else{
+        menuMobile.classList.remove('open');
+    }
+};
+
+hamburguer.addEventListener('click',()=>{
+    x();
+});
