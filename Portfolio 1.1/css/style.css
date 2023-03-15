@@ -43,6 +43,7 @@
 /*Page=================================================================*/
 html {
   background: #ffffff;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -67,7 +68,7 @@ body {
   background: #111;
   height: 62px;
   width: 100%;
-  padding: 0 5%;
+  
   grid-area: header;
 }
 
@@ -89,6 +90,7 @@ body {
   background-size: 19rem;
   text-indent: -9999px;
   float: left;
+  margin-left: 5%;
   z-index: 100;
 }
 
@@ -198,14 +200,15 @@ a:active{
   width: 35px;
   height: 62px;
   float: right;
-  background: url(../img/imagens.png) -51px -74px no-repeat;
+  background: url(../img/imagens.png) -43px -74px no-repeat;
   background-size: 14rem;
+  margin-right: 5%;
   text-indent: -9999px;
 }
 
 #icon-nav.active {
   opacity: 0.5;
-  background: url(../img/imagens.png) -97px -82px no-repeat !important;
+  background: url(../img/imagens.png) -81px -82px no-repeat !important;
   background-size: 15rem !important;
   
 }
@@ -213,31 +216,89 @@ a:active{
 /*===============================================================*/
 
 #section1{
-  background: rgb(85, 85, 85);
+  background: rgb(255, 255, 255);
   padding-top: 62px;
   height: 100vh;
   grid-area: section1;
+  border-bottom: #dddddd solid 1px;
   z-index: -20;
 }
 
 #section2{
-  background: rgb(87, 67, 67);
+  background: #fafafa;
   height: 100vh;
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgb(0 0 0 / 10%);
+  -moz-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 4px 0px rgb(0 0 0 / 10%);
   grid-area: section2;
 }
 
 #footer{
   grid-area: footer;
+  position: relative;
   background: #f5f5f5;
-  height: 50px;
+  height: 100px;
   padding: 40px 5% 0 5%;
   color: #757575;
   font-size: 16px;
-  font-size: 1.6rem;
   text-align: center;
   -webkit-box-shadow: inset 0px 1px 4px 0px rgb(0 0 0 / 10%);
   -moz-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 1px 4px 0px rgb(0 0 0 / 10%);
+}
+
+#footer #nav-footer li{
+  display: none;
+}
+
+#footer a.top {
+  background: transparent url(../img/imagens.png) -226px -134px no-repeat;
+  background-size: 437px;
+  width: 118px;
+  height: 90px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -59px;
+  bottom: -40px;
+  text-indent: -9999px;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+#footer a:hover.top {
+  bottom: -35px;
+}
+
+#footer a {
+  color: #757575;
+  text-decoration: none;
+  float: center;
+  margin-right: 20px;
+  -webkit-transition: color .3s;
+  -moz-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+#footer a:hover{
+  color:#333333;
+}
+
+#footer .gradiente-branco{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: -moz-linear-gradient(center bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-linear-gradient(bottom, #ffffff, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(bottom, #ffffff, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(bottom, #ffffff, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
 }
 
 @media only screen and (min-width: 830px) {
@@ -260,6 +321,7 @@ a:active{
     width: 10rem;
     background: url(../img/imagens.png) 0px -14px no-repeat;
     background-size: 20rem;
+    margin-left: 0;
   }
 
   #header nav {
@@ -338,15 +400,29 @@ a:active{
     padding-top: 96px;
   }
 
+  #footer #nav-footer{
+    display: inline-block;
+    margin: auto;
+    float: right;
+  }
+  
+  #footer #nav-footer li{
+    display: inline-block;
+  }
+
+  #footer a{
+    float: left;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {
   
   #header #logo {
     height: 96px;
-    width: 11.5rem;
-    background: url(../img/imagens.png) 0px -30px no-repeat;
-    background-size: 25rem;
+    width: 14rem;
+    background: url(../img/imagens.png) 0px -44px no-repeat;
+    background-size: 30rem;
   }
 
   #header nav #menu li #social li a {
