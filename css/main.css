@@ -667,16 +667,6 @@ footer p #rodapeLink{
         justify-content: space-around;
         align-items: center;
     }
-    
-    .conteudoSobreMim1{
-        justify-content: right;
-        padding-right: 5rem;
-        
-    }
-    
-    .conteudoSobreMim1 #conteudoSobreMim1Imagem{
-        width: 60%;
-    }
 
     .conteudoSobreMim2{
         padding-right: 4rem;
